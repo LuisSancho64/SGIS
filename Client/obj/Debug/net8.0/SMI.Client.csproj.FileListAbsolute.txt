@@ -1203,8 +1203,8 @@ C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\mc5c1wzpp6-t
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\a76d0n1hry-tptq2av103.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\pzjsl2m35f-lfu7j35m59.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\e5qni1uxjz-oyz0vx2fzb.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\8cb6dkhgsn-qfr4sqiu2g.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\urh2okopiy-h9dkefzqqx.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\8cb6dkhgsn-1qxynm0brw.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\urh2okopiy-isn980mwdp.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1219,7 +1219,7 @@ C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.dll
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\refint\SMI.Client.dll
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.pdb
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\ref\SMI.Client.dll
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\9qcxuewxje-pqdcilhsuo.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\6snww9l0yl-10n9q1c40i.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\ds46s9g3iy-vww3syfdtc.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\9qcxuewxje-nbglpjh6fp.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\6snww9l0yl-6hcaoy9cov.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\ds46s9g3iy-ri24ey4uzv.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
