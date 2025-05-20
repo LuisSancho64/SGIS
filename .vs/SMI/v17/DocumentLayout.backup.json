@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\4ndre\\source\\repos\\SGIS\\",
   "Documents": [
     {
@@ -135,14 +136,22 @@
       "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\UTA\\Medicina\\SGIS\\",
+  "Documents": [],
+>>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 147,
+      "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": -1,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -154,11 +163,28 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:2:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{7f40df72-066b-4810-a08b-c0fbed76c948}"
+<<<<<<< Updated upstream
             },
             {
               "$type": "Document",
@@ -566,6 +592,8 @@
               "ViewState": "AgIAAEcAAAAAAAAAAAAgwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T22:47:49.905Z"
+=======
+>>>>>>> Stashed changes
             }
           ]
         }

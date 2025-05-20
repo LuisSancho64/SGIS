@@ -3,6 +3,7 @@ using Application.Interfaces;
 
 using Infrastructure.Context;
 using SMI.Server.Services;
+using Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ builder.Services.AddRazorPages();
 
 //registro
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPersonaService, PersonaService>();
+
 
 
 

@@ -17,4 +17,6 @@ public partial class Profesion
 
     [InverseProperty("id_ProfesionNavigation")]
     public virtual ICollection<PersonaProfesion> PersonaProfesions { get; set; } = new List<PersonaProfesion>();
+
+
 }

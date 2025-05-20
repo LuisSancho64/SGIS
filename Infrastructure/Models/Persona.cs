@@ -27,16 +27,15 @@ public partial class Persona
     [StringLength(100)]
     public string? apellido2 { get; set; }
 
-    public DateOnly? FechaNacimiento { get; set; }
+    public DateTime? FechaNacimiento { get; set; }
 
     [StringLength(255)]
     public string? Correo { get; set; }
 
     [InverseProperty("id_PersonaNavigation")]
     public virtual Paciente? Paciente { get; set; }
-
     [InverseProperty("id_PersonaNavigation")]
-    public virtual PersonaActividadLaboral? PersonaActividadLaboral { get; set; }
+    public virtual ICollection<PersonaActividadLaboral> PersonaActividadLaboral { get; set; } = new List<PersonaActividadLaboral>();
 
     [InverseProperty("id_PersonaNavigation")]
     public virtual PersonaDireccion? PersonaDireccion { get; set; }
@@ -71,9 +70,8 @@ public partial class Persona
     [InverseProperty("id_ProfesionalSaludNavigation")]
     public virtual ProfesionalSalud? ProfesionalSalud { get; set; }
 
-    [ForeignKey("id")]
     [InverseProperty("Persona")]
-    public virtual PersonaProfesion idNavigation { get; set; } = null!;
+    public virtual ICollection<PersonaProfesion> PersonaProfesions { get; set; }
 
     [ForeignKey("id_Genero")]
     [InverseProperty("Personas")]

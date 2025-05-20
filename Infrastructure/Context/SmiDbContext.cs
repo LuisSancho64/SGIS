@@ -349,23 +349,30 @@ public partial class SmiDbContext : DbContext
         {
             entity.Property(e => e.id).ValueGeneratedOnAdd();
 
-            entity.HasOne(d => d.idNavigation).WithOne(p => p.Persona)
+            entity.HasOne(d => d.id_GeneroNavigation)
+                .WithMany(p => p.Personas)
+                .HasForeignKey(d => d.id_Genero) 
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Persona_PersonaProfesion");
-
-            entity.HasOne(d => d.id_GeneroNavigation).WithMany(p => p.Personas).HasConstraintName("FK_Persona_Genero");
+                .HasConstraintName("FK_Persona_Genero");
         });
+
 
         modelBuilder.Entity<PersonaActividadLaboral>(entity =>
         {
             entity.Property(e => e.id_Persona).ValueGeneratedNever();
 
-            entity.HasOne(d => d.id_ActividadLaboralNavigation).WithMany(p => p.PersonaActividadLaborals).HasConstraintName("FK_PersonaActividadLaboral_ActividadLaboral");
+            entity.HasOne(d => d.id_ActividadLaboralNavigation)
+                  .WithMany(p => p.PersonaActividadLaborals)
+                  .HasForeignKey(d => d.id_ActividadLaboral)
+                  .HasConstraintName("FK_PersonaActividadLaboral_ActividadLaboral");
 
-            entity.HasOne(d => d.id_PersonaNavigation).WithOne(p => p.PersonaActividadLaboral)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_PersonaActividadLaboral_Persona");
+            entity.HasOne(d => d.id_PersonaNavigation)
+                  .WithMany(p => p.PersonaActividadLaboral)
+                  .HasForeignKey(d => d.id_Persona)
+                  .OnDelete(DeleteBehavior.ClientSetNull)
+                  .HasConstraintName("FK_PersonaActividadLaboral_Persona");
         });
+
 
         modelBuilder.Entity<PersonaDireccion>(entity =>
         {
@@ -445,10 +452,22 @@ public partial class SmiDbContext : DbContext
 
         modelBuilder.Entity<PersonaProfesion>(entity =>
         {
-            entity.Property(e => e.id_Persona).ValueGeneratedNever();
+            entity.HasKey(e => new { e.id_Persona, e.id_Profesion });
 
-            entity.HasOne(d => d.id_ProfesionNavigation).WithMany(p => p.PersonaProfesions).HasConstraintName("FK_PersonaProfesion_Profesion");
+            entity.Property(e => e.id_Persona).ValueGeneratedNever();
+            entity.Property(e => e.id_Profesion).ValueGeneratedNever();
+
+            entity.HasOne(d => d.Persona)
+                .WithMany(p => p.PersonaProfesions)
+                .HasForeignKey(d => d.id_Persona)
+                .HasConstraintName("FK_PersonaProfesion_Persona");
+
+            entity.HasOne(d => d.id_ProfesionNavigation)
+                .WithMany(p => p.PersonaProfesions)
+                .HasForeignKey(d => d.id_Profesion)
+                .HasConstraintName("FK_PersonaProfesion_Profesion");
         });
+
 
         modelBuilder.Entity<PersonaReligion>(entity =>
         {
