@@ -18,9 +18,15 @@
 <div class="form-group mb-3">
     <label for="clave">Contraseña</label>
     <div class="input-group">
-        <input @bind="loginRequest.Clave" type="@passwordInputType" class="form-control" id="clave" placeholder="Contraseña" />
-        <button class="btn btn-outline-secondary" type="button" @onclick="TogglePasswordVisibility" title="Mostrar/Ocultar">
-            <span class="oi @(passwordInputType == "password" ? "oi-eye" : "oi-eye-slash")"></span>
+        <input @bind="loginRequest.Clave"
+               type="@passwordInputType"
+               class="form-control"
+               id="clave"
+               placeholder="Contraseña" />
+        <button type="button"
+                class="btn btn-outline-secondary"
+                @onclick="TogglePasswordVisibility">
+            @(passwordInputType == "password" ? "Mostrar" : "Ocultar")
         </button>
     </div>
     @if (showClaveError)
@@ -28,6 +34,7 @@
         <div class="form-text text-muted">Por favor ingrese su contraseña.</div>
     }
 </div>
+
 
 <button class="btn btn-primary w-100 mt-2" @onclick="IniciarSesion">Ingresar</button>
 
@@ -64,7 +71,6 @@
             {
                 var usuario = await response.Content.ReadFromJsonAsync<SMI.Shared.DTOs.LoginResponseDTO>();
 
-                // Guarda el nombre en localStorage si quieres usarlo en la app
                 if (usuario is not null)
                 {
                     await LocalStorage.SetItemAsync("usuarioNombre", usuario.NombreCompleto);
@@ -74,7 +80,6 @@
             }
             else
             {
-                // Aquí podrías parsear mejor el error si viene en JSON
                 errorMessage = "Correo o clave inválidos, o usuario inactivo.";
             }
         }

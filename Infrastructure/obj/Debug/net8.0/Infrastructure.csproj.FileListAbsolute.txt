@@ -1,9 +1,3 @@
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\Infrastructure.deps.json
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\Infrastructure.runtimeconfig.json
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\Infrastructure.dll
@@ -14,6 +8,12 @@ C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\SMI.Shared.dll
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\Application.pdb
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\Domain.pdb
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\bin\Debug\net8.0\SMI.Shared.pdb
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.AssemblyInfo.cs
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastr.15EFFBFE.Up2Date
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\Infrastructure.dll
 C:\Users\4ndre\source\repos\SGIS\Infrastructure\obj\Debug\net8.0\refint\Infrastructure.dll

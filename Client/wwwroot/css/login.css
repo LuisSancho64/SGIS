@@ -74,3 +74,39 @@
         transform: translateY(0);
     }
 }
+
+/* Asegura que el grupo esté alineado y se vea integrado */
+.password-group {
+    display: flex;
+}
+
+/* Estilo base del botón de mostrar/ocultar */
+.toggle-password-btn {
+    border: 1px solid #ced4da;
+    border-left: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    padding: 0 0.75rem;
+    font-weight: bold;
+    height: auto;
+    white-space: nowrap;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+/* Estado: Mostrar (contraseña oculta) */
+.btn-show {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Estado: Ocultar (contraseña visible) */
+.btn-hide {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Hover animado */
+.toggle-password-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}

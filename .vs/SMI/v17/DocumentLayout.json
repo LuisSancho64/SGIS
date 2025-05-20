@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\4ndre\\source\\repos\\SGIS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\wwwroot\\css\\tarjeta.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\wwwroot\\css\\tarjeta.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\shared\\components\\tarjeta.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\shared\\components\\tarjeta.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\infrastructure\\context\\smidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\context\\smidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\infrastructure\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\shared\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|solutionrelative:shared\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\shared\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|solutionrelative:shared\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,24 +51,12 @@
       "RelativeMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|solutionrelative:shared\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\shared\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3122F799-FE1B-493C-8874-32E773F983F9}|Shared\\SMI.Shared.csproj|solutionrelative:shared\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\shared\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\shared\\loginlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\providers\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{BC291CC3-3656-47D7-ADD7-BC93240BA186}|Server\\SMI.Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\infrastructure\\context\\smidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\context\\smidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -79,20 +103,8 @@
       "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\infrastructure\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\infrastructure\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7447019-D248-4FB6-8F86-E89A032999C7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|solutionrelative:client\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF959AB2-3296-4C65-A1E6-FC3B81A84B44}|Client\\SMI.Client.csproj|c:\\users\\4ndre\\source\\repos\\sgis\\client\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -106,110 +118,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:14:42.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginResponseDTO.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginResponseDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\DTOs\\LoginResponseDTO.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginResponseDTO.cs",
-              "RelativeToolTip": "Shared\\DTOs\\LoginResponseDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:58:07.303Z",
+              "Title": "tarjeta.css",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\css\\tarjeta.css",
+              "RelativeDocumentMoniker": "Client\\wwwroot\\css\\tarjeta.css",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\css\\tarjeta.css",
+              "RelativeToolTip": "Client\\wwwroot\\css\\tarjeta.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-20T16:30:38.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginRequestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginRequestDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\DTOs\\LoginRequestDTO.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginRequestDTO.cs",
-              "RelativeToolTip": "Shared\\DTOs\\LoginRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:46:21.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:36:38.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioDTO.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\UsuarioDTO.cs",
-              "RelativeDocumentMoniker": "Shared\\DTOs\\UsuarioDTO.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\UsuarioDTO.cs",
-              "RelativeToolTip": "Shared\\DTOs\\UsuarioDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:29:45.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Persona.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Persona.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Persona.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Persona.cs",
-              "RelativeToolTip": "Domain\\Entities\\Persona.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:20:39.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Usuario.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Usuario.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Usuario.cs",
-              "RelativeToolTip": "Domain\\Entities\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T05:20:29.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CustomAuthStateProvider.cs",
-              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Providers\\CustomAuthStateProvider.cs",
-              "RelativeDocumentMoniker": "Client\\Providers\\CustomAuthStateProvider.cs",
-              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Providers\\CustomAuthStateProvider.cs",
-              "RelativeToolTip": "Client\\Providers\\CustomAuthStateProvider.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T04:52:02.785Z",
+              "DocumentIndex": 4,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "Client\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T16:18:50.153Z",
               "EditorCaption": ""
             },
             {
@@ -230,7 +164,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Tarjeta.razor",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\Components\\Tarjeta.razor",
+              "RelativeDocumentMoniker": "Client\\Shared\\Components\\Tarjeta.razor",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\Components\\Tarjeta.razor",
+              "RelativeToolTip": "Client\\Shared\\Components\\Tarjeta.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-20T15:38:09.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:14:42.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginResponseDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\DTOs\\LoginResponseDTO.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginResponseDTO.cs",
+              "RelativeToolTip": "Shared\\DTOs\\LoginResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:58:07.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginRequestDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\DTOs\\LoginRequestDTO.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\LoginRequestDTO.cs",
+              "RelativeToolTip": "Shared\\DTOs\\LoginRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:46:21.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:36:38.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "Shared\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "Shared\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:29:45.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Persona.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Persona.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Persona.cs",
+              "RelativeToolTip": "Domain\\Entities\\Persona.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:20:39.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Entities\\Usuario.cs",
+              "RelativeToolTip": "Domain\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T05:20:29.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CustomAuthStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Providers\\CustomAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "Client\\Providers\\CustomAuthStateProvider.cs",
+              "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Providers\\CustomAuthStateProvider.cs",
+              "RelativeToolTip": "Client\\Providers\\CustomAuthStateProvider.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T04:52:02.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Client\\Shared\\NavMenu.razor",
@@ -238,12 +284,11 @@
               "RelativeToolTip": "Client\\Shared\\NavMenu.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T03:04:21.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T03:04:21.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\App.razor",
               "RelativeDocumentMoniker": "Client\\App.razor",
@@ -255,20 +300,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "login.css",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\css\\login.css",
               "RelativeDocumentMoniker": "Client\\wwwroot\\css\\login.css",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\css\\login.css",
               "RelativeToolTip": "Client\\wwwroot\\css\\login.css",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAUwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-20T02:41:33.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "LoginLayout.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Shared\\LoginLayout.razor",
               "RelativeDocumentMoniker": "Client\\Shared\\LoginLayout.razor",
@@ -276,24 +321,24 @@
               "RelativeToolTip": "Client\\Shared\\LoginLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-20T02:41:08.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T02:41:08.608Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 3,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "Client\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\wwwroot\\index.html",
               "RelativeToolTip": "Client\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-05-20T02:34:17.818Z"
+              "WhenOpened": "2025-05-20T02:34:17.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Models\\LoginRequest.cs",
@@ -305,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Server\\appsettings.json",
               "RelativeDocumentMoniker": "Server\\appsettings.json",
@@ -313,25 +358,24 @@
               "RelativeToolTip": "Server\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-20T00:33:39.944Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T00:33:39.944Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 7,
               "Title": "SmiDbContext.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Context\\SmiDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Context\\SmiDbContext.cs",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Context\\SmiDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Context\\SmiDbContext.cs",
-              "ViewState": "AgIAAOgBAAAAAAAAAAAIwAYCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T00:20:04.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Models\\Usuario.cs",
@@ -339,12 +383,11 @@
               "RelativeToolTip": "Infrastructure\\Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T00:19:00.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T00:19:00.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\AuthController.cs",
@@ -352,24 +395,24 @@
               "RelativeToolTip": "Server\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T23:59:12.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T23:59:12.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 0,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Home.razor",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Pages\\Home.razor",
               "RelativeToolTip": "Client\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-19T23:56:24.359Z"
+              "WhenOpened": "2025-05-19T23:56:24.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
@@ -377,25 +420,24 @@
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T23:50:38.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T23:50:38.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Login.razor",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Pages\\Login.razor",
               "RelativeToolTip": "Client\\Pages\\Login.razor",
-              "ViewState": "AgIAADoAAAAAAAAAAAAUwFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-19T23:45:09.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
@@ -403,12 +445,11 @@
               "RelativeToolTip": "Client\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T23:36:06.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T23:36:06.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Client\\_Imports.razor",
               "RelativeDocumentMoniker": "Client\\_Imports.razor",
@@ -420,15 +461,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 8,
               "Title": "Persona.cs",
               "DocumentMoniker": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Models\\Persona.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Models\\Persona.cs",
               "ToolTip": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Infrastructure\\Models\\Persona.cs",
               "RelativeToolTip": "Infrastructure\\Models\\Persona.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAYwFMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T22:47:49.905Z"
+              "WhenOpened": "2025-05-19T22:47:49.905Z",
+              "EditorCaption": ""
             }
           ]
         }
