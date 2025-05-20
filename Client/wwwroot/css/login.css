@@ -1,24 +1,32 @@
 ﻿.login-container {
     display: flex;
-    height: 100vh;
+    flex-direction: column; /* Móvil: columna */
+    min-height: 100vh;
     width: 100%;
 }
 
 .left-panel {
     flex: 1;
-    background-image: url('/images/fondologin.jpg'); /* <-- cambia 'login-bg.jpg' por tu imagen */
+    min-height: 40vh;
+    background-image: url('/images/fondologin.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2; /* Imagen abajo en móvil */
 }
 
 .right-panel {
     flex: 1;
     background-color: #f8f9fa;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 1rem;
+    order: 1; /* Formulario arriba en móvil */
+    z-index: 1;
 }
 
 .login-card {
@@ -29,8 +37,32 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 2rem;
     animation: fadeInUp 0.5s ease-in-out;
+    margin: 1rem 0;
+    box-sizing: border-box;
 }
 
+/* Media query para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .login-container {
+        flex-direction: row; /* En pantallas grandes: fila */
+    }
+
+    .left-panel {
+        min-height: 100vh; /* Imagen ocupa toda la altura */
+        order: 1; /* Imagen a la izquierda */
+    }
+
+    .right-panel {
+        order: 2; /* Formulario a la derecha */
+        padding: 0;
+    }
+
+    .login-card {
+        margin: 0;
+    }
+}
+
+/* Animación */
 @keyframes fadeInUp {
     from {
         opacity: 0;

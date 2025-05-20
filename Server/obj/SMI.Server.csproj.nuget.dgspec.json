@@ -286,8 +286,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Application\\Application.csproj"
+              },
               "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\SMI.Shared.csproj": {
+                "projectPath": "C:\\Users\\4ndre\\source\\repos\\SGIS\\Shared\\SMI.Shared.csproj"
               }
             }
           }

@@ -1,7 +1,10 @@
 ﻿using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Models;
+using SMI.Shared.DTOs;  // usar DTOs compartidos
 using System.Threading.Tasks;
+using Application.Interfaces;
+
 
 namespace SMI.Server.Services
 {
@@ -14,22 +17,27 @@ namespace SMI.Server.Services
             _context = context;
         }
 
-        public async Task<bool> LoginAsync(LoginRequest loginRequest)
+        public async Task<UsuarioDTO?> LoginAsync(LoginRequestDTO loginRequest)
         {
             var personaConUsuario = await _context.Personas
                 .Include(p => p.Usuario)
                 .FirstOrDefaultAsync(p => p.Correo == loginRequest.Correo);
 
             if (personaConUsuario?.Usuario == null)
-                return false;
+                return null;
 
             if (personaConUsuario.Usuario.Clave != loginRequest.Clave)
-                return false;
+                return null;
 
             if (!(personaConUsuario.Usuario.Activo ?? false))
-                return false;
+                return null;
 
-            return true;
+            return new UsuarioDTO
+            {
+                IdUsuario = personaConUsuario.Usuario.Id,
+                NombreUsuario = personaConUsuario.nombre,
+                Correo = personaConUsuario.Correo
+            };
         }
     }
 }

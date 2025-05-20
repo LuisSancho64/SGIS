@@ -1,3 +1,10 @@
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.csproj.AssemblyReference.cache
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.AssemblyInfoInputs.cache
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.AssemblyInfo.cs
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.csproj.CoreCompileInputs.cache
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.sourcelink.json
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\wwwroot\_framework\Azure.Core.wasm
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\wwwroot\_framework\Azure.Identity.wasm
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
@@ -724,13 +731,6 @@ C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\icudt_no_CJK.dat
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\emcc-props.json
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\SMI.Shared.dll
 C:\Users\4ndre\source\repos\SGIS\Client\bin\Debug\net8.0\SMI.Shared.pdb
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.csproj.AssemblyReference.cache
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.AssemblyInfoInputs.cache
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.AssemblyInfo.cs
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.csproj.CoreCompileInputs.cache
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.sourcelink.json
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\webcil\Azure.Core.wasm
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\webcil\Azure.Identity.wasm
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
@@ -1203,11 +1203,6 @@ C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\mc5c1wzpp6-t
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\a76d0n1hry-tptq2av103.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\pzjsl2m35f-lfu7j35m59.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\e5qni1uxjz-oyz0vx2fzb.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\8cb6dkhgsn-ofai0t1ezs.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\urh2okopiy-fkyhs4irs3.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\9qcxuewxje-if64td634g.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\6snww9l0yl-23c2h9bq9d.gz
-C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\ds46s9g3iy-d7mj1q2g09.gz
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1222,3 +1217,8 @@ C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.dll
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\refint\SMI.Client.dll
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\SMI.Client.pdb
 C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\ref\SMI.Client.dll
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\8cb6dkhgsn-81911ffzdk.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\urh2okopiy-wov73zxczu.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\9qcxuewxje-d44otidbqr.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\6snww9l0yl-m98wm2hh6j.gz
+C:\Users\4ndre\source\repos\SGIS\Client\obj\Debug\net8.0\compressed\ds46s9g3iy-eossi5c4qo.gz

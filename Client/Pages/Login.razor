@@ -20,7 +20,7 @@
     <div class="input-group">
         <input @bind="loginRequest.Clave" type="@passwordInputType" class="form-control" id="clave" placeholder="Contraseña" />
         <button class="btn btn-outline-secondary" type="button" @onclick="TogglePasswordVisibility" title="Mostrar/Ocultar">
-            <span class="oi @(passwordInputType == "password" ? "oi-eye" : "oi-eye")"></span>
+            <span class="oi @(passwordInputType == "password" ? "oi-eye" : "oi-eye-slash")"></span>
         </button>
     </div>
     @if (showClaveError)
@@ -39,7 +39,7 @@
 }
 
 @code {
-    private LoginRequest loginRequest = new();
+    private SMI.Shared.DTOs.LoginRequestDTO loginRequest = new();
     private string errorMessage;
     private string passwordInputType = "password";
     private bool showCorreoError = false;
@@ -62,13 +62,20 @@
 
             if (response.IsSuccessStatusCode)
             {
-                var usuario = await response.Content.ReadFromJsonAsync<UsuarioDTO>();
-                await LocalStorage.SetItemAsync("usuarioNombre", usuario.Nombre);
+                var usuario = await response.Content.ReadFromJsonAsync<SMI.Shared.DTOs.LoginResponseDTO>();
+
+                // Guarda el nombre en localStorage si quieres usarlo en la app
+                if (usuario is not null)
+                {
+                    await LocalStorage.SetItemAsync("usuarioNombre", usuario.NombreCompleto);
+                }
+
                 Navigation.NavigateTo("/home");
             }
             else
             {
-                errorMessage = await response.Content.ReadAsStringAsync();
+                // Aquí podrías parsear mejor el error si viene en JSON
+                errorMessage = "Correo o clave inválidos, o usuario inactivo.";
             }
         }
         catch (Exception ex)
@@ -80,18 +87,5 @@
     private void TogglePasswordVisibility()
     {
         passwordInputType = passwordInputType == "password" ? "text" : "password";
-    }
-
-    public class LoginRequest
-    {
-        public string Correo { get; set; }
-        public string Clave { get; set; }
-    }
-
-    public class UsuarioDTO
-    {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Correo { get; set; }
     }
 }

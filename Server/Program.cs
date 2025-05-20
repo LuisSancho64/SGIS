@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using SMI.Server.Services;
+using Application.Interfaces;
+
 using Infrastructure.Context;
+using SMI.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +14,10 @@ builder.Services.AddDbContext<SmiDbContext>(options =>
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-// Registro del servicio de autenticación simple
+//registro
 builder.Services.AddScoped<IAuthService, AuthService>();
+
+
 
 var app = builder.Build();
 
