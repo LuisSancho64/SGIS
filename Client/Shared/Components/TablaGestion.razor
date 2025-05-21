@@ -154,8 +154,9 @@
     private int PaginaActual = 1;
     private List<int> PageSizeOptions = new() { 5, 10, 15, 20 };
 
-    private string BusquedaCampo = "";
-    private string BusquedaValor = "";
+    private string BusquedaCampo { get; set; } = string.Empty;
+    private string BusquedaValor { get; set; } = string.Empty;
+
 
     public async Task CargarRegistros(List<List<string>> registros)
     {
@@ -188,6 +189,13 @@
     private void EjecutarBusqueda()
     {
         BuscarCallback.InvokeAsync(new string[] { BusquedaCampo, BusquedaValor });
+    }
+
+	public async Task LimpiarBusqueda()
+	{
+		BusquedaCampo = string.Empty;
+		BusquedaValor = string.Empty;
+        await BuscarCallback.InvokeAsync(new string[] { "", "" });
     }
 
     private int TotalPaginas = 1;

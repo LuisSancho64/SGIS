@@ -26,13 +26,13 @@ RenderAcciones="RenderAccionesPersonas"
 @if (mostrarCard && personaSeleccionada != null)
 {
     <div class="modal fade show d-flex align-items-center justify-content-center"
-         tabindex="-1"
-         style="background-color: rgba(0,0,0,0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1050;"
-         role="dialog">
+    tabindex="-1"
+    style="background-color: rgba(0,0,0,0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1050;"
+    role="dialog">
 
         <div style="width: 90vw; height: 90vh; display: flex; justify-content: center; align-items: center;">
             <div class="modal-content"
-                 style="width: 100%; height: 100%; display: flex; flex-direction: column; max-width: 1100px;">
+            style="width: 100%; height: 100%; display: flex; flex-direction: column; max-width: 1100px;">
                 <div class="modal-header">
                     <h5 class="modal-title">Información de la Persona</h5>
                     <button type="button" class="btn-close" @onclick="() => mostrarCard = false"></button>
@@ -68,16 +68,16 @@ RenderAcciones="RenderAccionesPersonas"
     };
 
     private PersonaDto personaSeleccionada;
-	private bool mostrarCard = false;
+    private bool mostrarCard = false;
 
-	private List<TipoDocumentoDTO> listaTipoDocumentos = new();
+    private List<TipoDocumentoDTO> listaTipoDocumentos = new();
     private List<PersonaDto> listaPersonas = new();
     private List<List<string>> DatosPersonas = new();
     private List<List<string>> DatosFiltrados = new();
 
     protected override async Task OnInitializedAsync()
     {
-		listaTipoDocumentos = await Http.GetFromJsonAsync<List<TipoDocumentoDTO>>("tipos-documento");
+        listaTipoDocumentos = await Http.GetFromJsonAsync<List<TipoDocumentoDTO>>("tipos-documento");
 
         await CargarDatosPersonas();
         await tabla.CargarRegistros(DatosPersonas.Select(d => d.Concat(new[] { d[0] }).ToList()).ToList());
@@ -165,7 +165,9 @@ RenderAcciones="RenderAccionesPersonas"
 
     private async Task LimpiarBusqueda()
     {
-        await tabla.CargarRegistros(DatosPersonas.Select(d => d.Concat(new[] { d[0] }).ToList()).ToList());
+        await tabla.LimpiarBusqueda();
+		await CargarDatosPersonas();
+		await tabla.CargarRegistros(DatosPersonas.Select(d => d.Concat(new[] { d[0] }).ToList()).ToList());
     }
 
     RenderFragment<List<string>> RenderAccionesPersonas => fila => builder =>
