@@ -1,0 +1,35 @@
+﻿@using SMI.Client.Models
+
+@code {
+    [Parameter] public PersonaDto persona { get; set; }
+}
+
+<div class="card shadow-sm mb-3" style="min-width: 700px; max-width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">Información de la Persona</h5>
+        <p class="card-text">
+            <strong>Nombre completo:</strong> @($"{persona?.nombre} {persona?.nombre2} {persona?.apellido} {persona?.apellido2}") <br />
+            <strong>Cédula:</strong> @(persona?.documento?.numeroDocumento ?? "No disponible") <br />
+            <strong>Tipo Documento:</strong> @(persona?.documento?.nombreTipoDocumento ?? "No disponible") <br />
+            <strong>Fecha Nacimiento:</strong> @persona?.fechaNacimiento.ToString("yyyy-MM-dd") <br />
+            <strong>Correo:</strong> @(persona?.correo ?? "No disponible") <br />
+            <strong>Dirección:</strong><br />
+            - Calle Principal: @(persona?.direccion?.FirstOrDefault()?.callePrincipal ?? "No disponible")<br />
+            - Calle Sec. 1: @(persona?.direccion?.FirstOrDefault()?.calleSecundaria1 ?? "No disponible")<br />
+            - Calle Sec. 2: @(persona?.direccion?.FirstOrDefault()?.calleSecundaria2 ?? "No disponible")<br />
+            - Número Casa: @(persona?.direccion?.FirstOrDefault()?.numeroCasa ?? "No disponible")<br />
+            - Referencia: @(persona?.direccion?.FirstOrDefault()?.referencia ?? "No disponible")<br />
+            <strong>Teléfonos:</strong> Celular: @(persona?.telefono?.celular ?? "No disponible"), Convencional: @(persona?.telefono?.convencional ?? "No disponible")<br />
+            <strong>Estado Civil:</strong> @(persona?.estadoCivil?.nombre ?? "No disponible")<br />
+            <strong>Seguro Médico:</strong> @(persona?.segurosMedicos?.FirstOrDefault()?.nombre ?? "No disponible")<br />
+            <strong>Lateralidad:</strong> @(persona?.lateralidad?.nombreLateralidad ?? "No disponible")<br />
+            <strong>Religión:</strong> @(persona?.religion?.nombre ?? "No disponible")<br />
+            <strong>Ciudad / Provincia:</strong> @(persona?.lugarResidencia?.nombreCiudad ?? "No disponible") / @(persona?.lugarResidencia?.nombreProvincia ?? "No disponible")<br />
+            <strong>Profesional de Salud:</strong> @(persona?.profesionalSalud?.nombreTipoProfesional ?? "No disponible"), Registro: @(persona?.profesionalSalud?.numeroRegistro ?? "No disponible")<br />
+            <strong>Grupo Sanguíneo:</strong> @(persona?.grupoSanguineo?.nombre ?? "No disponible")<br />
+            <strong>Profesión:</strong> @(persona?.profesiones?.FirstOrDefault()?.nombre ?? "No disponible")<br />
+            <strong>Actividad Laboral:</strong> @(persona?.actividadLaboral?.FirstOrDefault()?.nombre ?? "No disponible")<br />
+            <strong>Instrucción:</strong> @(persona?.instruccion?.nombre ?? "No disponible")<br />
+        </p>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components
+@using SMI.Client.Models
 @inject IJSRuntime JS
 
 <div class="card shadow-sm">
@@ -14,8 +15,22 @@
                     }
                 </select>
 
-                <input class="form-control form-control-sm" placeholder="Ingrese término..." style="min-width: 200px;"
-                       @bind="BusquedaValor" />
+                @if (EsCampoTipoDocumento)
+                {
+                    <select class="form-select form-select-sm w-auto" @bind="BusquedaValor">
+                        <option value="">-- Seleccione tipo --</option>
+                        @foreach (var tipo in TiposDocumento)
+                        {
+                            <option value="@tipo.nombre">@tipo.nombre</option>
+                        }
+                    </select>
+                }
+                else
+                {
+                    <input class="form-control form-control-sm" placeholder="Ingrese término..." style="min-width: 200px;"
+                    @bind="BusquedaValor" />
+                }
+
 
                 <button class="btn btn-primary btn-sm" @onclick="EjecutarBusqueda" disabled="@(!PuedeBuscar)">
                     Buscar
@@ -119,102 +134,64 @@
 </div>
 
 @code {
-    [Parameter] public string TituloTabla { get; set; }
+    [Parameter] public List<TipoDocumentoDTO> TiposDocumento { get; set;  } = new();
     [Parameter] public List<string> Columnas { get; set; } = new();
-
+    [Parameter] public string TituloTabla { get; set; }
     [Parameter] public EventCallback<string[]> BuscarCallback { get; set; }
     [Parameter] public EventCallback AgregarCallback { get; set; }
     [Parameter] public EventCallback LimpiarCallback { get; set; }
-
     [Parameter] public RenderFragment<List<string>> RenderAcciones { get; set; }
 
-    private List<string> OpcionesBusqueda { get; set; } = new();
-    private string BusquedaCampo { get; set; } = "";
-    private string BusquedaValor { get; set; } = "";
+    [Parameter]
+    public List<string> OpcionesBusqueda { get; set; } = new(); // Evita null
 
-    private List<List<string>> Registros = new();
+    private List<List<string>> TodosRegistros = new();
     private List<List<string>> RegistrosMostrados = new();
 
+    private bool EsCampoTipoDocumento => BusquedaCampo == "Tipo de Documentos";
+
+    private int PageSize = 5;
     private int PaginaActual = 1;
+    private List<int> PageSizeOptions = new() { 5, 10, 15, 20 };
 
-    private int pageSize = 5;
-    private int PageSize
-    {
-        get => pageSize;
-        set
-        {
-            if (pageSize != value)
-            {
-                pageSize = value;
-                CambiarPagina(1);
-            }
-        }
-    }
-
-    private readonly List<int> PageSizeOptions = new() { 5, 10, 25, 50 };
-
-    private int TotalPaginas => (int)Math.Ceiling(Registros.Count / (double)PageSize);
-
-    private IEnumerable<int> NumerosPagina
-    {
-        get
-        {
-            // Mostrar máximo 5 números de página centrados en la actual
-            int maxPaginas = 5;
-            int inicio = Math.Max(1, PaginaActual - 2);
-            int fin = Math.Min(TotalPaginas, inicio + maxPaginas - 1);
-            if (fin - inicio < maxPaginas - 1) inicio = Math.Max(1, fin - maxPaginas + 1);
-
-            return Enumerable.Range(inicio, fin - inicio + 1);
-        }
-    }
-
-    private bool PuedeBuscar => !string.IsNullOrWhiteSpace(BusquedaCampo) && !string.IsNullOrWhiteSpace(BusquedaValor);
-
-    protected override void OnParametersSet()
-    {
-        // Set opciones de búsqueda a partir de las columnas excepto la última (acciones)
-        if (Columnas?.Count > 1 && OpcionesBusqueda.Count == 0)
-        {
-            OpcionesBusqueda = Columnas.Take(Columnas.Count - 1).ToList();
-        }
-    }
-
-    private async Task EjecutarBusqueda()
-    {
-        if (PuedeBuscar)
-        {
-            await BuscarCallback.InvokeAsync(new string[] { BusquedaCampo, BusquedaValor });
-            PaginaActual = 1;
-            ActualizarRegistrosMostrados();
-        }
-    }
-
-    private void ActualizarRegistrosMostrados()
-    {
-        RegistrosMostrados = Registros
-            .Skip((PaginaActual - 1) * PageSize)
-            .Take(PageSize)
-            .ToList();
-        StateHasChanged();
-    }
+    private string BusquedaCampo = "";
+    private string BusquedaValor = "";
 
     public async Task CargarRegistros(List<List<string>> registros)
     {
-        Registros = registros ?? new List<List<string>>();
+        TodosRegistros = registros;
         PaginaActual = 1;
-        ActualizarRegistrosMostrados();
+        ActualizarPaginacion();
         await InvokeAsync(StateHasChanged);
     }
 
-    private async Task CambiarPagina(int nuevaPagina)
+    private void ActualizarPaginacion()
     {
-        if (nuevaPagina < 1) nuevaPagina = 1;
-        if (nuevaPagina > TotalPaginas) nuevaPagina = TotalPaginas;
-        if (nuevaPagina == PaginaActual) return;
+        TotalPaginas = (int)Math.Ceiling((double)TodosRegistros.Count / PageSize);
+        if (PaginaActual > TotalPaginas) PaginaActual = TotalPaginas;
+        if (PaginaActual < 1) PaginaActual = 1;
 
-        PaginaActual = nuevaPagina;
-        ActualizarRegistrosMostrados();
-        await InvokeAsync(StateHasChanged);
+        RegistrosMostrados = TodosRegistros
+            .Skip((PaginaActual - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+
+        NumerosPagina = Enumerable.Range(1, TotalPaginas).ToList();
     }
+
+    private void CambiarPagina(int nuevaPagina)
+    {
+        PaginaActual = nuevaPagina;
+        ActualizarPaginacion();
+    }
+
+    private void EjecutarBusqueda()
+    {
+        BuscarCallback.InvokeAsync(new string[] { BusquedaCampo, BusquedaValor });
+    }
+
+    private int TotalPaginas = 1;
+    private List<int> NumerosPagina = new();
+    private bool PuedeBuscar => !string.IsNullOrWhiteSpace(BusquedaCampo) && !string.IsNullOrWhiteSpace(BusquedaValor);
 }
+

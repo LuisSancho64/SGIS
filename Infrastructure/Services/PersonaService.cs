@@ -600,6 +600,7 @@ namespace Infrastructure.Services
         {
             return new PersonaDTO
             {
+                id = persona.id,
                 id_Genero = persona.id_Genero,
                 nombre = persona.nombre,
                 nombre2 = persona.nombre2,
@@ -727,6 +728,7 @@ namespace Infrastructure.Services
         {
             return new Persona
             {
+                id = dto.id,
                 id_Genero = dto.id_Genero,
                 nombre = dto.nombre,
                 nombre2 = dto.nombre2,
