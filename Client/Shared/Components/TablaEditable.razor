@@ -1,0 +1,80 @@
+﻿@using Microsoft.AspNetCore.Components
+
+<div class="tabla-editable">
+    <div class="tabla-header">
+        <h5>@Title</h5>
+        <button class="edit-button" @onclick="AbrirModal">
+            <span class="oi oi-pencil"></span>
+        </button>
+    </div>
+
+    <div class="tabla-scroll">
+        <table class="tabla-contenido">
+            <thead>
+                <tr>
+                    @foreach (var header in ColumnHeaders)
+                    {
+                        <th>@header</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var row in Rows)
+                {
+                    <tr>
+                        @foreach (var cell in row)
+                        {
+                            <td>@cell</td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@if (MostrarModal)
+{
+    <div class="modal-backdrop">
+        <div class="modal-content">
+            <h5>Editar Tabla</h5>
+
+            @for (int i = 0; i < ColumnHeaders.Count; i++)
+            {
+                <div class="form-group">
+                    <label>@ColumnHeaders[i]</label>
+                    <input type="text" class="form-control" />
+                </div>
+            }
+
+            <div class="modal-actions">
+                <button class="btn btn-primary" @onclick="GuardarCambios">Guardar</button>
+                <button class="btn btn-secondary" @onclick="CerrarModal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public string Title { get; set; } = "Tabla Editable";
+    [Parameter] public List<string> ColumnHeaders { get; set; } = new() { "Columna 1", "Columna 2", "Columna 3" };
+    [Parameter]
+    public List<List<string>> Rows { get; set; } = new()
+    {
+        new() { "Dato 1", "Dato 2", "Dato 3" },
+        new() { "Dato A", "Dato B", "Dato C" },
+        new() { "Dato X", "Dato Y", "Dato Z" },
+        new() { "Más 1", "Más 2", "Más 3" },
+        new() { "Otro 1", "Otro 2", "Otro 3" }
+    };
+
+    private bool MostrarModal { get; set; } = false;
+
+    private void AbrirModal() => MostrarModal = true;
+    private void CerrarModal() => MostrarModal = false;
+    private void GuardarCambios()
+    {
+        // Aquí podrías aplicar lógica real
+        MostrarModal = false;
+    }
+}

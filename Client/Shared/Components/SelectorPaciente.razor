@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Components
+
+<div class="selector-paciente">
+    <div class="selector-filtros">
+        <select @bind="BusquedaPor" class="selector-dropdown">
+            <option disabled selected value="">Seleccione opción de búsqueda</option>
+            <option value="cedula">Cédula</option>
+            <option value="nombre">Nombre</option>
+            <option value="historia">Historia Clínica</option>
+        </select>
+
+        <input @bind="TerminoBusqueda" placeholder="Ingrese término" class="selector-input" />
+
+        <button @onclick="BuscarPaciente" class="selector-boton">
+            Buscar
+        </button>
+    </div>
+
+    <div class="selector-paciente-seleccionado">
+        <label><strong>Paciente:</strong></label>
+        <div class="selector-paciente-datos">
+            @if (!string.IsNullOrWhiteSpace(PacienteSeleccionado))
+            {
+                <span>@PacienteSeleccionado</span>
+            }
+            else
+            {
+                <em>No se ha seleccionado un paciente.</em>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private string BusquedaPor { get; set; } = "";
+    private string TerminoBusqueda { get; set; } = "";
+    private string PacienteSeleccionado { get; set; } = "";
+
+    private void BuscarPaciente()
+    {
+        // Simula selección de paciente (luego lo conectarás a un servicio real)
+        if (!string.IsNullOrWhiteSpace(BusquedaPor) && !string.IsNullOrWhiteSpace(TerminoBusqueda))
+        {
+            PacienteSeleccionado = $"Ejemplo: {BusquedaPor.ToUpper()} - {TerminoBusqueda}";
+        }
+    }
+}

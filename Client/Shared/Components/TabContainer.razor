@@ -4,18 +4,16 @@
     <div class="tab-header">
         @foreach (var tab in Tabs)
         {
-            <button class="tab-button @(tab.IsActive ? "active" : "")" @onclick="@(() => NavigateToTab(tab.Route))">
+            <button class="tab-button @(tab.IsActive ? "active" : "")" @onclick="@(() => SelectTab(tab))">
                 @tab.Title
             </button>
         }
     </div>
 
-    <div class="tab-content">
-        @if (Tabs.Count > 0)
+    <div class="tab-content mt-3">
+        @if (ActiveTabContent != null)
         {
-            <div>
-                @TabContent
-            </div>
+            @ActiveTabContent
         }
     </div>
 </div>
@@ -24,25 +22,25 @@
     [Parameter]
     public List<TabItem> Tabs { get; set; }
 
-    [Inject] private NavigationManager Navigation { get; set; }
+    [Parameter]
+    public Dictionary<string, RenderFragment> TabContents { get; set; }
 
-    private RenderFragment TabContent { get; set; }
+    private string ActiveTabKey => Tabs.FirstOrDefault(t => t.IsActive)?.Route;
 
-    private void NavigateToTab(string route)
+    private RenderFragment ActiveTabContent =>
+        ActiveTabKey != null && TabContents != null && TabContents.ContainsKey(ActiveTabKey)
+            ? TabContents[ActiveTabKey]
+            : null;
+
+    private void SelectTab(TabItem tab)
     {
-        // Navegar al tab correspondiente
-        Navigation.NavigateTo(route);
-        // Desmarcar todas las pestañas
-        foreach (var tab in Tabs)
+        foreach (var t in Tabs)
         {
-            tab.IsActive = false;
+            t.IsActive = false;
         }
-        // Marcar la pestaña activa
-        var activeTab = Tabs.FirstOrDefault(t => t.Route == route);
-        if (activeTab != null)
-        {
-            activeTab.IsActive = true;
-        }
+
+        tab.IsActive = true;
+        StateHasChanged();
     }
 
     public class TabItem

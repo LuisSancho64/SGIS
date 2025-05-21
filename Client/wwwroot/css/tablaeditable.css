@@ -1,0 +1,93 @@
+﻿.tabla-editable-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+/* Cada tabla ocupa 48% del ancho para que entren 2 por fila con espacio */
+.tabla-editable {
+    flex: 1 1 calc(50% - 0.5rem);
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+/* Scroll interno */
+.tabla-scroll {
+    overflow-x: auto;
+    max-height: 150px;
+}
+
+/* Tabla visualmente consistente */
+.tabla-contenido {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabla-contenido th,
+.tabla-contenido td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tabla-contenido th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Botón editar */
+.tabla-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.edit-button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}

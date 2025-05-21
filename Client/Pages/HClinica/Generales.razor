@@ -2,26 +2,53 @@
 @layout MainLayout
 @using SMI.Client.Shared.Components
 
-<TabContainer Tabs="Tabs" />
-
-<h3>Generales</h3>
-
-<!-- Aquí va el contenido de la página de Generales -->
-<form>
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre Completo</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo" />
-    </div>
-    <!-- Otros campos aquí -->
-</form>
+<TabContainer Tabs="Tabs" TabContents="TabContentFragments" />
 
 @code {
     private List<TabContainer.TabItem> Tabs = new()
-    {
+        {
         new() { Title = "Generales", Route = "/historia-clinica/generales", IsActive = true },
         new() { Title = "Obstétrico", Route = "/historia-clinica/obstetrico" },
         new() { Title = "Ginecológico", Route = "/historia-clinica/ginecologico" },
         new() { Title = "Nutrición", Route = "/historia-clinica/nutricion" },
         new() { Title = "Psicológico", Route = "/historia-clinica/psicologico" }
+        };
+
+    private Dictionary<string, RenderFragment> TabContentFragments => new()
+            {
+                ["/historia-clinica/generales"] = @<div>
+        <h3>Generales</h3>
+        <SelectorPaciente />
+
+        <div class="tabla-editable-wrapper">
+            
+            <TablaEditable Title="Personales" />
+            <TablaEditable Title="Familiares" />
+            <TablaEditable Title="Cirugia" />
+            <TablaEditable Title="Alergias" />
+            <TablaEditable Title="Alimentos" />
+            <TablaEditable Title="Habitos" />
+        </div>
+    </div>,
+
+        ["/historia-clinica/obstetrico"] = @<div>
+        <h3>Obstétrico</h3>
+        <p>Contenido para Obstétrico.</p>
+    </div>,
+
+        ["/historia-clinica/ginecologico"] = @<div>
+        <h3>Ginecológico</h3>
+        <p>Contenido para Ginecológico.</p>
+    </div>,
+
+        ["/historia-clinica/nutricion"] = @<div>
+        <h3>Nutrición</h3>
+        <p>Contenido para Nutrición.</p>
+    </div>,
+
+        ["/historia-clinica/psicologico"] = @<div>
+        <h3>Psicológico</h3>
+        <p>Contenido para Psicológico.</p>
+    </div>,
     };
 }
