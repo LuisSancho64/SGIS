@@ -1,0 +1,220 @@
+﻿@using Microsoft.AspNetCore.Components
+@inject IJSRuntime JS
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <!-- Busqueda + botones arriba -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+            <div class="d-flex flex-wrap align-items-center gap-2" style="flex:1 1 50%;">
+                <select class="form-select form-select-sm w-auto" @bind="BusquedaCampo">
+                    <option disabled value="">Elija opción de búsqueda</option>
+                    @foreach (var opcion in OpcionesBusqueda)
+                    {
+                        <option value="@opcion">@opcion</option>
+                    }
+                </select>
+
+                <input class="form-control form-control-sm" placeholder="Ingrese término..." style="min-width: 200px;"
+                       @bind="BusquedaValor" />
+
+                <button class="btn btn-primary btn-sm" @onclick="EjecutarBusqueda" disabled="@(!PuedeBuscar)">
+                    Buscar
+                </button>
+            </div>
+
+            <div class="d-flex gap-2" style="flex:1 1 40%; justify-content: flex-end;">
+                <button class="btn btn-success btn-sm" @onclick="AgregarCallback">Agregar</button>
+                <button class="btn btn-secondary btn-sm" @onclick="LimpiarCallback">Limpiar</button>
+            </div>
+        </div>
+
+        <!-- Titulo tabla -->
+        @if (!string.IsNullOrWhiteSpace(TituloTabla))
+        {
+            <h5 class="mb-3">@TituloTabla</h5>
+        }
+
+        <!-- Tabla -->
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        @foreach (var col in Columnas)
+                        {
+                            <th>@col</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (RegistrosMostrados.Any())
+                    {
+                        @foreach (var fila in RegistrosMostrados)
+                        {
+                            <tr>
+                                @for (int i = 0; i < Columnas.Count; i++)
+                                {
+                                    <td>
+                                        @if (i == Columnas.Count - 1 && RenderAcciones != null)
+                                        {
+                                            @RenderAcciones(fila)
+                                        }
+                                        else if (i < fila.Count)
+                                        {
+                                            @fila[i]
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="@Columnas.Count" class="text-center text-muted">No hay registros para mostrar</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Control cantidad por página + paginador -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center mt-3 gap-2">
+            <div class="d-flex align-items-center gap-2">
+                <label class="mb-0" for="selectPageSize">Mostrar</label>
+                <select id="selectPageSize" class="form-select form-select-sm w-auto" @bind="PageSize">
+                    @foreach (var size in PageSizeOptions)
+                    {
+                        <option value="@size">@size</option>
+                    }
+                </select>
+                <span class="mb-0">registros por página</span>
+            </div>
+
+            <nav aria-label="Paginación">
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item @(PaginaActual == 1 ? "disabled" : "")">
+                        <button class="page-link" @onclick="() => CambiarPagina(1)">Primero</button>
+                    </li>
+                    <li class="page-item @(PaginaActual == 1 ? "disabled" : "")">
+                        <button class="page-link" @onclick="() => CambiarPagina(PaginaActual - 1)">Anterior</button>
+                    </li>
+
+                    @foreach (var num in NumerosPagina)
+                    {
+                        <li class="page-item @(num == PaginaActual ? "active" : "")">
+                            <button class="page-link" @onclick="() => CambiarPagina(num)">@num</button>
+                        </li>
+                    }
+
+                    <li class="page-item @(PaginaActual == TotalPaginas ? "disabled" : "")">
+                        <button class="page-link" @onclick="() => CambiarPagina(PaginaActual + 1)">Siguiente</button>
+                    </li>
+                    <li class="page-item @(PaginaActual == TotalPaginas ? "disabled" : "")">
+                        <button class="page-link" @onclick="() => CambiarPagina(TotalPaginas)">Último</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string TituloTabla { get; set; }
+    [Parameter] public List<string> Columnas { get; set; } = new();
+
+    [Parameter] public EventCallback<string[]> BuscarCallback { get; set; }
+    [Parameter] public EventCallback AgregarCallback { get; set; }
+    [Parameter] public EventCallback LimpiarCallback { get; set; }
+
+    [Parameter] public RenderFragment<List<string>> RenderAcciones { get; set; }
+
+    private List<string> OpcionesBusqueda { get; set; } = new();
+    private string BusquedaCampo { get; set; } = "";
+    private string BusquedaValor { get; set; } = "";
+
+    private List<List<string>> Registros = new();
+    private List<List<string>> RegistrosMostrados = new();
+
+    private int PaginaActual = 1;
+
+    private int pageSize = 5;
+    private int PageSize
+    {
+        get => pageSize;
+        set
+        {
+            if (pageSize != value)
+            {
+                pageSize = value;
+                CambiarPagina(1);
+            }
+        }
+    }
+
+    private readonly List<int> PageSizeOptions = new() { 5, 10, 25, 50 };
+
+    private int TotalPaginas => (int)Math.Ceiling(Registros.Count / (double)PageSize);
+
+    private IEnumerable<int> NumerosPagina
+    {
+        get
+        {
+            // Mostrar máximo 5 números de página centrados en la actual
+            int maxPaginas = 5;
+            int inicio = Math.Max(1, PaginaActual - 2);
+            int fin = Math.Min(TotalPaginas, inicio + maxPaginas - 1);
+            if (fin - inicio < maxPaginas - 1) inicio = Math.Max(1, fin - maxPaginas + 1);
+
+            return Enumerable.Range(inicio, fin - inicio + 1);
+        }
+    }
+
+    private bool PuedeBuscar => !string.IsNullOrWhiteSpace(BusquedaCampo) && !string.IsNullOrWhiteSpace(BusquedaValor);
+
+    protected override void OnParametersSet()
+    {
+        // Set opciones de búsqueda a partir de las columnas excepto la última (acciones)
+        if (Columnas?.Count > 1 && OpcionesBusqueda.Count == 0)
+        {
+            OpcionesBusqueda = Columnas.Take(Columnas.Count - 1).ToList();
+        }
+    }
+
+    private async Task EjecutarBusqueda()
+    {
+        if (PuedeBuscar)
+        {
+            await BuscarCallback.InvokeAsync(new string[] { BusquedaCampo, BusquedaValor });
+            PaginaActual = 1;
+            ActualizarRegistrosMostrados();
+        }
+    }
+
+    private void ActualizarRegistrosMostrados()
+    {
+        RegistrosMostrados = Registros
+            .Skip((PaginaActual - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+        StateHasChanged();
+    }
+
+    public async Task CargarRegistros(List<List<string>> registros)
+    {
+        Registros = registros ?? new List<List<string>>();
+        PaginaActual = 1;
+        ActualizarRegistrosMostrados();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task CambiarPagina(int nuevaPagina)
+    {
+        if (nuevaPagina < 1) nuevaPagina = 1;
+        if (nuevaPagina > TotalPaginas) nuevaPagina = TotalPaginas;
+        if (nuevaPagina == PaginaActual) return;
+
+        PaginaActual = nuevaPagina;
+        ActualizarRegistrosMostrados();
+        await InvokeAsync(StateHasChanged);
+    }
+}

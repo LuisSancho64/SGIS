@@ -1,14 +1,14 @@
 ﻿@page "/login"
 @layout LoginLayout
-@inject HttpClient Http
-@inject NavigationManager Navigation
-@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 
 <h3 class="mb-4 text-center">Iniciar sesión</h3>
 
 <div class="form-group mb-3">
     <label for="correo">Correo</label>
-    <input @bind="loginRequest.Correo" class="form-control" id="correo" placeholder="Correo electrónico" />
+    <input @bind="loginRequest.Correo"
+           class="form-control"
+           id="correo"
+           placeholder="Correo electrónico" />
     @if (showCorreoError)
     {
         <div class="form-text text-muted">Por favor ingrese su correo.</div>
@@ -35,7 +35,6 @@
     }
 </div>
 
-
 <button class="btn btn-primary w-100 mt-2" @onclick="IniciarSesion">Ingresar</button>
 
 @if (!string.IsNullOrEmpty(errorMessage))
@@ -43,54 +42,4 @@
     <div class="alert alert-warning mt-3" role="alert">
         @errorMessage
     </div>
-}
-
-@code {
-    private SMI.Shared.DTOs.LoginRequestDTO loginRequest = new();
-    private string errorMessage;
-    private string passwordInputType = "password";
-    private bool showCorreoError = false;
-    private bool showClaveError = false;
-
-    private async Task IniciarSesion()
-    {
-        showCorreoError = string.IsNullOrWhiteSpace(loginRequest.Correo);
-        showClaveError = string.IsNullOrWhiteSpace(loginRequest.Clave);
-
-        if (showCorreoError || showClaveError)
-        {
-            errorMessage = "";
-            return;
-        }
-
-        try
-        {
-            var response = await Http.PostAsJsonAsync("api/auth/login", loginRequest);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var usuario = await response.Content.ReadFromJsonAsync<SMI.Shared.DTOs.LoginResponseDTO>();
-
-                if (usuario is not null)
-                {
-                    await LocalStorage.SetItemAsync("usuarioNombre", usuario.NombreCompleto);
-                }
-
-                Navigation.NavigateTo("/home");
-            }
-            else
-            {
-                errorMessage = "Correo o clave inválidos, o usuario inactivo.";
-            }
-        }
-        catch (Exception ex)
-        {
-            errorMessage = "Error al intentar iniciar sesión: " + ex.Message;
-        }
-    }
-
-    private void TogglePasswordVisibility()
-    {
-        passwordInputType = passwordInputType == "password" ? "text" : "password";
-    }
 }

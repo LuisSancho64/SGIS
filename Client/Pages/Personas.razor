@@ -1,0 +1,121 @@
+﻿@page "/personas"
+@layout MainLayout
+@using SMI.Client.Shared.Components
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+<link rel="stylesheet" href="css/tablagestion.css" />
+
+<h3 class="mb-4">Gestión de Personas</h3>
+
+<TablaGestion TituloTabla="Personas"
+              Columnas="ColumnasPersonas"
+              BuscarCallback="Buscar"
+              AgregarCallback="AgregarPersona"
+              LimpiarCallback="LimpiarBusqueda"
+              RenderAcciones="RenderAccionesPersonas"
+              @ref="tabla" />
+
+@code {
+    private TablaGestion tabla;
+    private List<string> ColumnasPersonas = new()
+    {
+        "Cédula", "Nombre", "Historia Clínica", "Edad", "Teléfono", "Acciones"
+    };
+
+    private List<List<string>> DatosDemo = new()
+    {
+        new() { "1720000001", "Juan Pérez", "HC001", "28", "099111111" },
+        new() { "1720000002", "Ana Gómez", "HC002", "34", "098222222" },
+        new() { "1720000003", "Luis Martínez", "HC003", "41", "097333333" },
+        new() { "1720000004", "María López", "HC004", "25", "096444444" },
+        new() { "1720000005", "Carlos Díaz", "HC005", "38", "095555555" },
+        new() { "1720000006", "Sofía Ramírez", "HC006", "30", "094666666" },
+        new() { "1720000007", "Pedro Fernández", "HC007", "29", "093777777" },
+        new() { "1720000008", "Lucía Torres", "HC008", "27", "092888888" },
+    };
+
+    private List<List<string>> DatosFiltrados = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await tabla.CargarRegistros(DatosDemo.Select(d => d.Concat(new[] { "" }).ToList()).ToList());
+    }
+
+    private async Task Buscar(string[] datos)
+    {
+        string campo = datos[0];
+        string valor = datos[1]?.Trim().ToLower() ?? "";
+
+        if (string.IsNullOrEmpty(campo) || string.IsNullOrEmpty(valor))
+        {
+            await tabla.CargarRegistros(DatosDemo.Select(d => d.Concat(new[] { "" }).ToList()).ToList());
+            return;
+        }
+
+        int indice = ColumnasPersonas.IndexOf(campo);
+        if (indice < 0) return;
+
+        DatosFiltrados = DatosDemo
+            .Where(row => row[indice].ToLower().Contains(valor))
+            .Select(r => r.Concat(new[] { "" }).ToList())
+            .ToList();
+
+        await tabla.CargarRegistros(DatosFiltrados);
+    }
+
+    private async Task AgregarPersona()
+    {
+        // Aquí podrías abrir modal o redirigir
+        await JS.InvokeVoidAsync("alert", "Botón agregar pulsado");
+    }
+
+    private async Task LimpiarBusqueda()
+    {
+        await tabla.CargarRegistros(DatosDemo.Select(d => d.Concat(new[] { "" }).ToList()).ToList());
+    }
+
+    RenderFragment<List<string>> RenderAccionesPersonas => fila => builder =>
+    {
+        int seq = 0;
+        builder.OpenElement(seq++, "button");
+        builder.AddAttribute(seq++, "class", "btn btn-sm btn-info me-1");
+        builder.AddAttribute(seq++, "title", "Ver");
+        builder.AddAttribute(seq++, "onclick", EventCallback.Factory.Create(this, () => VerPersona(fila)));
+        builder.AddContent(seq++, "Ver");
+        builder.CloseElement();
+
+        builder.OpenElement(seq++, "button");
+        builder.AddAttribute(seq++, "class", "btn btn-sm btn-warning me-1");
+        builder.AddAttribute(seq++, "title", "Editar");
+        builder.AddAttribute(seq++, "onclick", EventCallback.Factory.Create(this, () => EditarPersona(fila)));
+        builder.AddContent(seq++, "Editar");
+        builder.CloseElement();
+
+        builder.OpenElement(seq++, "button");
+        builder.AddAttribute(seq++, "class", "btn btn-sm btn-danger");
+        builder.AddAttribute(seq++, "title", "Eliminar");
+        builder.AddAttribute(seq++, "onclick",
+        EventCallback.Factory.Create(this, () => EliminarPersona(fila)));
+        builder.AddContent(seq++, "Eliminar");
+        builder.CloseElement();
+    };
+    private void VerPersona(List<string> fila)
+    {
+        var cedula = fila[0];
+        JS.InvokeVoidAsync("alert", $"Ver persona con cédula: {cedula}");
+    }
+
+    private void EditarPersona(List<string> fila)
+    {
+        var cedula = fila[0];
+        JS.InvokeVoidAsync("alert", $"Editar persona con cédula: {cedula}");
+    }
+
+    private void EliminarPersona(List<string> fila)
+    {
+        var cedula = fila[0];
+        JS.InvokeVoidAsync("alert", $"Eliminar persona con cédula: {cedula}");
+    }
+}
+    
