@@ -10,11 +10,15 @@
         }
     </div>
 
-    <div class="tab-content mt-3">
+    <div class="tab-content">
         @if (ActiveTabContent != null)
         {
             @ActiveTabContent
         }
+
+        <div class="tab-footer">
+            <button class="boton-guardar-tab" @onclick="GuardarCambios">Guardar</button>
+        </div>
     </div>
 </div>
 
@@ -28,7 +32,7 @@
     private string ActiveTabKey => Tabs.FirstOrDefault(t => t.IsActive)?.Route;
 
     private RenderFragment ActiveTabContent =>
-        ActiveTabKey != null && TabContents != null && TabContents.ContainsKey(ActiveTabKey)
+        ActiveTabKey != null && TabContents?.ContainsKey(ActiveTabKey) == true
             ? TabContents[ActiveTabKey]
             : null;
 
@@ -41,6 +45,12 @@
 
         tab.IsActive = true;
         StateHasChanged();
+    }
+
+    private void GuardarCambios()
+    {
+        Console.WriteLine("Guardar clickeado");
+        // Aquí puedes poner tu lógica real
     }
 
     public class TabItem

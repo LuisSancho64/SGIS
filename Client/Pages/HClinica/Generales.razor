@@ -1,54 +1,138 @@
 ﻿@page "/historia-clinica/generales"
 @layout MainLayout
 @using SMI.Client.Shared.Components
-
 <TabContainer Tabs="Tabs" TabContents="TabContentFragments" />
-
 @code {
     private List<TabContainer.TabItem> Tabs = new()
-        {
+            {
         new() { Title = "Generales", Route = "/historia-clinica/generales", IsActive = true },
         new() { Title = "Obstétrico", Route = "/historia-clinica/obstetrico" },
         new() { Title = "Ginecológico", Route = "/historia-clinica/ginecologico" },
         new() { Title = "Nutrición", Route = "/historia-clinica/nutricion" },
         new() { Title = "Psicológico", Route = "/historia-clinica/psicologico" }
-        };
-
+            };
     private Dictionary<string, RenderFragment> TabContentFragments => new()
             {
                 ["/historia-clinica/generales"] = @<div>
         <h3>Generales</h3>
         <SelectorPaciente />
-
         <div class="tabla-editable-wrapper">
-            
-            <TablaEditable Title="Personales" />
-            <TablaEditable Title="Familiares" />
-            <TablaEditable Title="Cirugia" />
-            <TablaEditable Title="Alergias" />
-            <TablaEditable Title="Alimentos" />
-            <TablaEditable Title="Habitos" />
+            <TablaEditable Title="Personales"
+                           ColumnHeaders="@PersonalesHeaders"
+                           Rows="@PersonalesRows"
+                           OnAgregarClicked="@(() => Agregar("Personales"))"
+                           OnEditarClicked="@((index) => Editar("Personales", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Personales", index))" />
+
+            <TablaEditable Title="Familiares"
+                           ColumnHeaders="@FamiliaresHeaders"
+                           Rows="@FamiliaresRows"
+                           OnAgregarClicked="@(() => Agregar("Familiares"))"
+                           OnEditarClicked="@((index) => Editar("Familiares", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Familiares", index))" />
+
+            <TablaEditable Title="Cirugia"
+                           ColumnHeaders="@CirugiaHeaders"
+                           Rows="@CirugiaRows"
+                           OnAgregarClicked="@(() => Agregar("Cirugia"))"
+                           OnEditarClicked="@((index) => Editar("Cirugia", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Cirugia", index))" />
+
+            <TablaEditable Title="Alergias"
+                           ColumnHeaders="@AlergiasHeaders"
+                           Rows="@AlergiasRows"
+                           OnAgregarClicked="@(() => Agregar("Alergias"))"
+                           OnEditarClicked="@((index) => Editar("Alergias", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Alergias", index))" />
+
+            <TablaEditable Title="Alimentos"
+                           ColumnHeaders="@AlimentosHeaders"
+                           Rows="@AlimentosRows"
+                           OnAgregarClicked="@(() => Agregar("Alimentos"))"
+                           OnEditarClicked="@((index) => Editar("Alimentos", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Alimentos", index))" />
+
+            <TablaEditable Title="Habitos"
+                           ColumnHeaders="@HabitosHeaders"
+                           Rows="@HabitosRows"
+                           OnAgregarClicked="@(() => Agregar("Habitos"))"
+                           OnEditarClicked="@((index) => Editar("Habitos", index))"
+                           OnEliminarClicked="@((index) => Eliminar("Habitos", index))" />
         </div>
     </div>,
-
-        ["/historia-clinica/obstetrico"] = @<div>
-        <h3>Obstétrico</h3>
-        <p>Contenido para Obstétrico.</p>
-    </div>,
-
-        ["/historia-clinica/ginecologico"] = @<div>
-        <h3>Ginecológico</h3>
-        <p>Contenido para Ginecológico.</p>
-    </div>,
-
-        ["/historia-clinica/nutricion"] = @<div>
-        <h3>Nutrición</h3>
-        <p>Contenido para Nutrición.</p>
-    </div>,
-
-        ["/historia-clinica/psicologico"] = @<div>
-        <h3>Psicológico</h3>
-        <p>Contenido para Psicológico.</p>
-    </div>,
+        ["/historia-clinica/obstetrico"] = @<div><h3>Obstétrico</h3><p>Contenido para Obstétrico.</p></div>,
+        ["/historia-clinica/ginecologico"] = @<div><h3>Ginecológico</h3><p>Contenido para Ginecológico.</p></div>,
+        ["/historia-clinica/nutricion"] = @<div><h3>Nutrición</h3><p>Contenido para Nutrición.</p></div>,
+        ["/historia-clinica/psicologico"] = @<div><h3>Psicológico</h3><p>Contenido para Psicológico.</p></div>,
     };
+
+    // Headers y Rows para Personales
+    private List<string> PersonalesHeaders = new() { "Nombre", "Edad", "Género", "Estado Civil" };
+    private List<List<string>> PersonalesRows = new()
+    {
+        new() { "Juan Pérez", "35", "Masculino", "Casado" },
+        new() { "María González", "28", "Femenino", "Soltera" },
+        new() { "Carlos Rodríguez", "42", "Masculino", "Divorciado" },
+        new() { "Ana López", "31", "Femenino", "Casada" },
+        new() { "Pedro Martínez", "39", "Masculino", "Soltero" }
+    };
+
+    // Headers y Rows para Familiares
+    private List<string> FamiliaresHeaders = new() { "Parentesco", "Nombre", "Edad", "Condición de Salud" };
+    private List<List<string>> FamiliaresRows = new()
+    {
+        new() { "Padre", "Carlos Pérez", "65", "Hipertensión" },
+        new() { "Madre", "Rosa Jiménez", "62", "Diabetes" },
+        new() { "Hermano", "Luis Pérez", "33", "Sano" },
+        new() { "Hermana", "Carmen Pérez", "29", "Asma" },
+        new() { "Abuelo", "Manuel Pérez", "89", "Fallecido - Cáncer" }
+    };
+
+    // Headers y Rows para Cirugia
+    private List<string> CirugiaHeaders = new() { "Fecha", "Tipo", "Lugar", "Médico", "Complicaciones" };
+    private List<List<string>> CirugiaRows = new()
+    {
+        new() { "2020-05-15", "Apendicectomía", "Hospital San Carlos", "Dr. López", "Ninguna" },
+        new() { "2018-03-22", "Vesícula", "Clínica del Norte", "Dr. Mendez", "Leve infección" },
+        new() { "2015-11-08", "Hernia inguinal", "Hospital Central", "Dr. Vargas", "Ninguna" },
+        new() { "2021-07-12", "Artroscopia rodilla", "Centro Médico", "Dr. Torres", "Recuperación lenta" },
+        new() { "2019-09-30", "Extracción muela", "Consultorio dental", "Dr. Ramos", "Ninguna" }
+    };
+
+    // Headers y Rows para Alergias
+    private List<string> AlergiasHeaders = new() { "Sustancia", "Reacción", "Gravedad", "Observaciones", "Tratamiento" };
+    private List<List<string>> AlergiasRows = new()
+    {
+        new() { "Penicilina", "Rash cutáneo", "Alta", "Hospitalizado por 2 días", "Antihistamínicos" },
+        new() { "Polen", "Rinitis", "Moderada", "Estacional - primavera", "Loratadina" },
+        new() { "Mariscos", "Urticaria", "Alta", "Evitar completamente", "Epinefrina" },
+        new() { "Latex", "Dermatitis", "Baja", "Solo contacto prolongado", "Cremas tópicas" },
+        new() { "Aspirina", "Gastritis", "Moderada", "Evitar AINES", "Protectores gástricos" }
+    };
+
+    // Headers y Rows para Alimentos
+    private List<string> AlimentosHeaders = new() { "Tipo", "Frecuencia", "Cantidad", "Preferencia" };
+    private List<List<string>> AlimentosRows = new()
+    {
+        new() { "Frutas", "Diaria", "3 porciones", "Manzanas, bananas" },
+        new() { "Verduras", "Diaria", "2 porciones", "Brócoli, espinaca" },
+        new() { "Carnes", "3 veces/semana", "150g", "Pollo, pescado" },
+        new() { "Lácteos", "Diaria", "2 vasos", "Leche descremada" },
+        new() { "Cereales", "Diaria", "1 porción", "Avena, quinoa" }
+    };
+
+    // Headers y Rows para Habitos
+    private List<string> HabitosHeaders = new() { "Hábito", "Frecuencia", "Cantidad", "Desde cuándo", "Observaciones" };
+    private List<List<string>> HabitosRows = new()
+    {
+        new() { "Fumar", "Ocasional", "2-3 cigarrillos", "5 años", "Solo fines de semana" },
+        new() { "Ejercicio", "3 veces/semana", "1 hora", "2 años", "Gimnasio y correr" },
+        new() { "Alcohol", "Social", "2-3 copas", "10 años", "Solo eventos sociales" },
+        new() { "Café", "Diaria", "2 tazas", "15 años", "Por las mañanas" },
+        new() { "Lectura", "Diaria", "30 minutos", "Toda la vida", "Antes de dormir" }
+    };
+
+    private void Agregar(string tabla) => Console.WriteLine($"Agregar en {tabla}");
+    private void Editar(string tabla, int index) => Console.WriteLine($"Editar fila {index} en {tabla}");
+    private void Eliminar(string tabla, int index) => Console.WriteLine($"Eliminar fila {index} en {tabla}");
 }

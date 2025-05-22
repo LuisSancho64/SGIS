@@ -1,5 +1,4 @@
-﻿/* Estilo principal del contenedor de pestañas */
-.tab-container {
+﻿.tab-container {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-family: sans-serif;
@@ -48,7 +47,34 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 0 0 8px 8px;
+    position: relative;
 }
+
+/* NUEVO: Footer con botón alineado a la derecha */
+.tab-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* NUEVO: Estilo consistente del botón Guardar */
+.boton-guardar-tab {
+    background-color: #0078d4;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+    .boton-guardar-tab:hover {
+        background-color: #005fa3;
+        transform: translateY(-1px);
+    }
 
 @media (max-width: 768px) {
     .tab-button {
@@ -58,5 +84,14 @@
 
     .tab-header {
         flex-direction: column;
+    }
+
+    .tab-footer {
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+
+    .boton-guardar-tab {
+        width: 100%;
     }
 }
