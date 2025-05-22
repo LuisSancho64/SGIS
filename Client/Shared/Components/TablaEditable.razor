@@ -14,7 +14,7 @@
                         {
                             <th>@header</th>
                         }
-                        <th>Acciones</th>
+                        <th class="acciones-column">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +26,7 @@
                             {
                                 <td>@Rows[i][j]</td>
                             }
-                            <td>
+                            <td class="acciones-column">
                                 <button class="btn btn-sm btn-primary me-1"
                                         @onclick="() => OnEditarClicked.InvokeAsync(index)">
                                     Editar
